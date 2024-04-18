@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image slider</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://malsup.github.io/jquery.cycle.all.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Stylish&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div id="container">
+        <h1>Image slider</h1>
+        <div id="shuffle">
+            <img src="img1.jpg" width="640" height="426">
+            <img src="img2.jpg" width="640" height="426">
+            <!-- <img src="img3.jpg" width="640" height="426"> -->
+            <img src="img4.jpg" width="640" height="426">
+            <!-- <img src="img5.jpg" width="640" height="426"> -->
+           
+        </div>
+        <ul id="nav">
+            <li id="prev"><a href="#"></a></li>
+            <li id="next"><a href="#"></a></li>
+        </ul>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $('#shuffle').cycle({ 
+            fx:'shuffle', 
+            pause : 1,
+            prev: '#prev',
+            next: '#next'
+            });     
+        });
+      
+    </script>
+</body>
+</html>
